@@ -2,58 +2,56 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div>
-      <section className="">
-        <div className="">
-          <h3 className="text-3xl py-1">Services I offer</h3>
-          <p className="text-sm py-2 leading-8 text-gray-800">
-            Since the beginning of my journey as a freelancer developer, I've
-            done remote work for
-            <span className="text-teal-500"> agencies </span> and consulted for{" "}
-            <span className="text-teal-500"> startups </span>
-            and collaborated with talented people to create digital products for
-            both business and consumer use.
-          </p>
-          <p className="text-md py-2 leading-8 text-gray-800">
-            I offer from a wide range of services, including brand design,
-            programming and teaching
+    <div className="bg-gradient-to-r from-purple-500 to-indigo-500 py-10 px-10">
+      <section className="max-w-5xl mx-auto">
+        <div className="text-center">
+          <h3 className="text-3xl py-1 font-bold text-white">
+            Services I Offer
+          </h3>
+          <p className="text-lg py-2 leading-8 text-gray-200">
+            As a seasoned Full Stack Developer, I specialize in delivering
+            top-notch software solutions tailored to meet diverse needs. My
+            services encompass a range of software development and management
+            offerings, aiming to elevate your digital presence and streamline
+            operations.
           </p>
         </div>
-        <div className="lg:flex gap-10">
-          <div className="text-center shadow-lg p-10 rounded-xl my-10">
-            <h3 className="text-lg font-medium pt-8 pb-2">Beautiful Designs</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 py-10">
+          <div className="text-center shadow-lg p-6 rounded-xl bg-white my-6">
+            <h3 className="text-lg font-medium pt-6 pb-2">
+              Web Application Development
+            </h3>
             <p className="py-2">
-              Creating elegant designs suited for your needs following your
-              design theory
+              Crafting robust and responsive web applications using modern
+              technologies and best practices.
             </p>
-            <h4 className="py-4 text-teal-600">Design tools I use</h4>
-            <p className="text-gray-800 py-1">Illustrator</p>
-            <p className="text-gray-800 py-1">Photoshop</p>
-            <p className="text-gray-800 py-1">Figma</p>
           </div>
-          <div className="text-center shadow-lg p-10 rounded-xl my-10">
-            <h3 className="text-lg font-medium pt-8 pb-2">Code</h3>
+          <div className="text-center shadow-lg p-6 rounded-xl bg-white my-6">
+            <h3 className="text-lg font-medium pt-6 pb-2">
+              Mobile App Development with React Native
+            </h3>
             <p className="py-2">
-              Creating elegant software suited for your needs following your
-              design theory
+              Building cross-platform mobile applications with React Native,
+              ensuring performance and scalability.
             </p>
-            <h4 className="py-4 text-teal-600">I develop the following</h4>
-            <p className="text-gray-800 py-1">Web Apps</p>
-            <p className="text-gray-800 py-1">Mobile Apps</p>
-            <p className="text-gray-800 py-1">API's</p>
           </div>
-          <div className="text-center shadow-lg p-10 rounded-xl my-10">
-            <h3 className="text-lg font-medium pt-8 pb-2">Consulting</h3>
+          <div className="text-center shadow-lg p-6 rounded-xl bg-white my-6">
+            <h3 className="text-lg font-medium pt-6 pb-2">
+              API Development and Testing
+            </h3>
             <p className="py-2">
-              Collaboratin with the industries best to continue developing the
-              new generation of developers
+              Designing and implementing robust APIs, coupled with thorough
+              testing to ensure functionality and reliability.
             </p>
-            <h4 className="py-4 text-teal-600">
-              Available on the following platforms
-            </h4>
-            <p className="text-gray-800 py-1">Disscord</p>
-            <p className="text-gray-800 py-1">Telegram</p>
-            <p className="text-gray-800 py-1">YouTube</p>
+          </div>
+          <div className="text-center shadow-lg p-6 rounded-xl bg-white my-6">
+            <h3 className="text-lg font-medium pt-6 pb-2">
+              Product Management and Testing
+            </h3>
+            <p className="py-2">
+              Offering product management services alongside comprehensive
+              testing to deliver exceptional digital products.
+            </p>
           </div>
         </div>
       </section>
