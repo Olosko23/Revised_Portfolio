@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IoMoon } from "react-icons/io5";
 import { IoSunny } from "react-icons/io5";
+import { motion, useAnimation } from "framer-motion";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Services from "./components/Services";
@@ -10,10 +11,22 @@ import Contact from "./components/Contact";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const controls = useAnimation();
 
   const getYear = () => {
     return new Date().getFullYear();
   };
+
+  const handleScroll = () => {
+    controls.start({ opacity: 1, y: 0, transition: { duration: 0.8 } });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -55,13 +68,32 @@ function App() {
           </nav>
         </>
         <Hero />
-        <About />
-        <Services />
-        <Techs />
-        <Projects />
-        <Contact />
+
+        <motion.section initial={{ opacity: 0, y: 50 }} animate={controls}>
+          <About />
+        </motion.section>
+
+        <motion.section initial={{ opacity: 0, y: 50 }} animate={controls}>
+          <Services />
+        </motion.section>
+
+        <motion.section initial={{ opacity: 0, y: 50 }} animate={controls}>
+          <Techs />
+        </motion.section>
+
+        <motion.section initial={{ opacity: 0, y: 50 }} animate={controls}>
+          <Projects />
+        </motion.section>
+
+        <motion.section initial={{ opacity: 0, y: 50 }} animate={controls}>
+          <Contact />
+        </motion.section>
         <>
-          <section className="bg-gradient-to-r from-purple-500 to-indigo-500 px-10">
+          <motion.section
+            className="bg-gradient-to-r from-purple-500 to-indigo-500 px-10"
+            initial={{ opacity: 0, y: 50 }}
+            animate={controls}
+          >
             <div className="h-10">
               <div className="flex flex-row justify-center gap-3">
                 <p className="font-medium">George Collins &copy; {getYear()}</p>
@@ -70,7 +102,7 @@ function App() {
                 </p>
               </div>
             </div>
-          </section>
+          </motion.section>
         </>
       </main>
     </div>
