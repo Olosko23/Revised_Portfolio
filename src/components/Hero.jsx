@@ -1,11 +1,26 @@
+import { useEffect } from "react";
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillGithub,
 } from "react-icons/ai";
 import collins from "../assets/HeroImage.jpeg";
+import { motion, useAnimation } from "framer-motion";
 
 const Hero = () => {
+  const controls = useAnimation();
+
+  const handleScroll = () => {
+    controls.start({ opacity: 1, y: 0, transition: { duration: 0.4 } });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="py-12">
       <div className="text-center pt-14 px-10">
@@ -44,9 +59,11 @@ const Hero = () => {
           <AiFillGithub />
         </a>
       </div>
-      <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mb-20 overflow-hidden md:h-96 md:w-96">
-        <img src={collins} alt="image" />
-      </div>
+      <motion.section initial={{ opacity: 0, y: 50 }} animate={controls}>
+        <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mb-20 overflow-hidden md:h-96 md:w-96">
+          <img src={collins} alt="image" />
+        </div>{" "}
+      </motion.section>
     </div>
   );
 };

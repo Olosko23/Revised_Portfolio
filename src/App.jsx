@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { IoMoon } from "react-icons/io5";
 import { IoSunny } from "react-icons/io5";
 import { motion, useAnimation } from "framer-motion";
+import { Link } from "react-scroll";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Services from "./components/Services";
@@ -17,8 +18,16 @@ function App() {
     return new Date().getFullYear();
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+      duration: 1000,
+    });
+  };
+
   const handleScroll = () => {
-    controls.start({ opacity: 1, y: 0, transition: { duration: 0.8 } });
+    controls.start({ opacity: 1, y: 0, transition: { duration: 1.2 } });
   };
 
   useEffect(() => {
@@ -67,8 +76,8 @@ function App() {
             </ul>
           </nav>
         </>
-        <Hero />
 
+        <Hero />
         <motion.section initial={{ opacity: 0, y: 50 }} animate={controls}>
           <About />
         </motion.section>
@@ -104,6 +113,16 @@ function App() {
             </div>
           </motion.section>
         </>
+        <div className="fixed bottom-10 right-10">
+          <Link to="top" smooth={true} duration={1000}>
+            <button
+              onClick={scrollToTop}
+              className="bg-gray-500 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-full py-2 px-4 focus:outline-none"
+            >
+              &#8593;
+            </button>
+          </Link>
+        </div>
       </main>
     </div>
   );

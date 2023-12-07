@@ -30,19 +30,14 @@ const Techs = () => {
       title: "React",
     },
     {
-      id: 4,
-      src: MaterialUILogo,
-      title: "Material UI",
-    },
-    {
       id: 5,
       src: TailwindLogo,
       title: "Tailwind CSS",
     },
     {
-      id: 6,
-      src: GitHubLogo,
-      title: "GitHub",
+      id: 4,
+      src: MaterialUILogo,
+      title: "Material UI",
     },
     {
       id: 7,
@@ -63,6 +58,11 @@ const Techs = () => {
       id: 10,
       src: JavaLogo,
       title: "Java",
+    },
+    {
+      id: 6,
+      src: GitHubLogo,
+      title: "GitHub",
     },
     {
       id: 11,
@@ -98,7 +98,7 @@ const Techs = () => {
           {techs.map(({ id, title, src }) => (
             <div
               key={id}
-              className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center justify-center"
+              className="bg-white rounded-lg shadow-md  cursor-pointer hover:scale-110 duration-300 overflow-hidden flex flex-col items-center justify-center"
             >
               <img
                 src={src}
