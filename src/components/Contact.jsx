@@ -1,4 +1,9 @@
-import React from "react";
+import {
+  AiFillTwitterCircle,
+  AiFillLinkedin,
+  AiFillGithub,
+} from "react-icons/ai";
+import { BsWhatsapp } from "react-icons/bs";
 
 const Contact = () => {
   return (
@@ -14,6 +19,40 @@ const Contact = () => {
                 Have questions or want to discuss a project? Feel free to
                 contact me.
               </p>
+              <div className="text-5xl flex justify-center gap-8 py-3 my-4 px-4 text-gray-600">
+                <a
+                  className="hover:bg-[#1DA1F2] rounded-md p-1"
+                  href="https://twitter.com/olos_ko_lins"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillTwitterCircle />
+                </a>
+                <a
+                  className="hover:bg-[#0072b1] rounded-md p-1"
+                  href="https://www.linkedin.com/in/collins-oloo-2646bb1a6/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillLinkedin />
+                </a>
+                <a
+                  className="hover:bg-[#6e7681] rounded-md p-1"
+                  href="https://github.com/Olosko23"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillGithub />
+                </a>
+                <a
+                  className="hover:bg-[#25D366] rounded-md p-1"
+                  href="https://wa.me/254799590711"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <BsWhatsapp />
+                </a>
+              </div>
             </div>
             <div className="bg-white p-8 md:w-1/2">
               <form
@@ -24,13 +63,13 @@ const Contact = () => {
                 <input
                   type="text"
                   name="name"
-                  placeholder="Enter Your Name"
+                  placeholder="Name"
                   className="p-2 my-4 border-2 rounded-md focus:outline-none"
                 />
                 <input
                   type="email"
                   name="email"
-                  placeholder="Enter Your Email"
+                  placeholder="email@email.com"
                   className="p-2 my-4 border-2 rounded-md focus:outline-none"
                 />
                 <textarea
