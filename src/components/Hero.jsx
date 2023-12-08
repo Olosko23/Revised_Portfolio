@@ -12,7 +12,7 @@ const Hero = () => {
   const controls = useAnimation();
 
   const handleScroll = () => {
-    controls.start({ opacity: 1, y: 0, transition: { duration: 0.4 } });
+    controls.start({ opacity: 1, y: 0, transition: { duration: 0.3 } });
   };
 
   useEffect(() => {
