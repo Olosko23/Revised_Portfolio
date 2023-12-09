@@ -34,7 +34,7 @@ const Hero = () => {
           comprehensive programming solutions.
         </p>
       </div>
-      <div className="text-5xl flex justify-center gap-8 py-3 my-4 px-4 text-gray-600">
+      <div className="text-5xl flex justify-center gap-8 py-4 my-4 px-4 text-gray-600">
         <a
           className="hover:bg-[#1DA1F2] rounded-md p-1"
           href="https://twitter.com/olos_ko_lins"
