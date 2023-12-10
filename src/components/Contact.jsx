@@ -7,7 +7,7 @@ import { BsWhatsapp } from "react-icons/bs";
 
 const Contact = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-500 to-indigo-500 py-20">
+    <div className="bg-gradient-to-r from-purple-500 to-indigo-500 py-20 px-3">
       <section className="flex justify-center items-center">
         <div className="flex flex-col max-w-screen-lg mx-auto h-full shadow-lg rounded-xl overflow-hidden">
           <div className="flex flex-col md:flex-row">
