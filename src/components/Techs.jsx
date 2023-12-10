@@ -78,7 +78,7 @@ const Techs = () => {
 
   return (
     <div className="py-10">
-      <section className="max-w-5xl mx-auto">
+      <section className="max-w-5xl mx-auto px-3">
         <div>
           <h3 className="text-3xl font-bold mb-6 text-center">Tech Stack</h3>
           <p className="text-md leading-8 text-gray-800 text-center">
