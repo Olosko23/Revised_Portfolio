@@ -19,7 +19,7 @@ const Contact = () => {
                 Have questions or want to discuss a project? Feel free to
                 contact me.
               </p>
-              <div className="text-5xl flex justify-center gap-8 py-3 my-4 px-4 text-gray-600">
+              <div className="text-3xl md:text-5xl flex justify-center gap-4  md:gap-8 py-3 my-4 px-4 text-gray-600">
                 <a
                   className="hover:bg-[#1DA1F2] rounded-md p-1"
                   href="https://twitter.com/olos_ko_lins"
