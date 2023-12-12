@@ -7,7 +7,7 @@ import { BsWhatsapp } from "react-icons/bs";
 
 const Contact = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-500 to-indigo-500 py-20 px-3">
+    <div className="bg-gradient-to-r from-purple-500 to-indigo-500 py-10 md:py-20 px-3">
       <section className="flex justify-center items-center">
         <div className="flex flex-col max-w-screen-lg mx-auto h-full shadow-lg rounded-xl overflow-hidden">
           <div className="flex flex-col md:flex-row">
@@ -19,7 +19,7 @@ const Contact = () => {
                 Have questions or want to discuss a project? Feel free to
                 contact me.
               </p>
-              <div className="text-3xl md:text-5xl flex justify-center gap-4  md:gap-8 py-3 my-4 px-4 text-gray-600">
+              <div className="text-2xl md:text-4xl flex justify-center gap-6 md:gap-8 py-3 my-4 px-4 text-gray-600">
                 <a
                   className="hover:bg-[#1DA1F2] rounded-md p-1"
                   href="https://twitter.com/olos_ko_lins"
@@ -54,7 +54,7 @@ const Contact = () => {
                 </a>
               </div>
             </div>
-            <div className="bg-white p-8 md:w-1/2">
+            <div className="bg-white dark:bg-gray-600 p-8 md:w-1/2">
               <form
                 action="https://getform.io/f/94770f33-2cf2-411e-8c9f-bd1a03122049"
                 method="POST"

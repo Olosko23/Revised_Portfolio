@@ -41,7 +41,7 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-white rounded-lg shadow-md overflow-hidden"
+              className="bg-white dark:bg-gray-300 rounded-lg shadow-md overflow-hidden"
             >
               <img
                 src={project.imageUrl}

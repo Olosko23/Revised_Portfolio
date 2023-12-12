@@ -2,13 +2,13 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-500 to-indigo-500 py-10 px-10">
+    <div className="bg-gradient-to-r from-purple-500 to-indigo-500 py-5 px-5 md:py-10 md:px-10">
       <section className="max-w-5xl mx-auto">
         <div className="text-center">
-          <h3 className="text-3xl py-1 font-bold text-white">
+          <h3 className="text-3xl py-1 font-bold text-white dark:text-gray-300">
             Services I Offer
           </h3>
-          <p className="text-lg py-2 leading-8 text-gray-200">
+          <p className="text-lg py-2 leading-8 text-gray-200 dark:text-gray-300">
             As a seasoned Full Stack Developer, I specialize in delivering
             top-notch software solutions tailored to meet diverse needs. My
             services encompass a range of software development and management
@@ -17,7 +17,7 @@ const Services = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 py-10">
-          <div className="text-center shadow-lg p-6 rounded-xl bg-white my-6">
+          <div className="text-center shadow-lg p-6 rounded-xl bg-white dark:bg-gray-400 my-6">
             <h3 className="text-lg font-medium pt-6 pb-2">
               Web Application Development
             </h3>
@@ -26,7 +26,7 @@ const Services = () => {
               technologies and best practices.
             </p>
           </div>
-          <div className="text-center shadow-lg p-6 rounded-xl bg-white my-6">
+          <div className="text-center shadow-lg p-6 rounded-xl bg-white dark:bg-gray-400 my-6">
             <h3 className="text-lg font-medium pt-6 pb-2">
               Mobile App Development with React Native
             </h3>
@@ -35,7 +35,7 @@ const Services = () => {
               ensuring performance and scalability.
             </p>
           </div>
-          <div className="text-center shadow-lg p-6 rounded-xl bg-white my-6">
+          <div className="text-center shadow-lg p-6 rounded-xl bg-white dark:bg-gray-400 my-6">
             <h3 className="text-lg font-medium pt-6 pb-2">
               API Development and Testing
             </h3>
@@ -44,7 +44,7 @@ const Services = () => {
               testing to ensure functionality and reliability.
             </p>
           </div>
-          <div className="text-center shadow-lg p-6 rounded-xl bg-white my-6">
+          <div className="text-center shadow-lg p-6 rounded-xl bg-white dark:bg-gray-400 my-6">
             <h3 className="text-lg font-medium pt-6 pb-2">
               Product Management and Testing
             </h3>
