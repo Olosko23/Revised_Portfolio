@@ -98,7 +98,7 @@ const Techs = () => {
           {techs.map(({ id, title, src }) => (
             <div
               key={id}
-              className="bg-white dark:bg-gray-200 rounded-lg shadow-md  cursor-pointer hover:scale-110 duration-300 overflow-hidden flex flex-col items-center justify-center"
+              className="bg-white rounded-lg shadow-md  cursor-pointer hover:scale-110 duration-300 overflow-hidden flex flex-col items-center justify-center"
             >
               <img
                 src={src}
