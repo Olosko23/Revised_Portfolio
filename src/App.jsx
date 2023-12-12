@@ -22,12 +22,12 @@ function App() {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
-      duration: 1000,
+      duration: 2000,
     });
   };
 
   const handleScroll = () => {
-    controls.start({ opacity: 1, y: 0, transition: { duration: 1.2 } });
+    controls.start({ opacity: 1, y: 0, transition: { duration: 0.4 } });
   };
 
   useEffect(() => {
