@@ -77,8 +77,8 @@ const Techs = () => {
   ];
 
   return (
-    <div className="py-10">
-      <section className="max-w-5xl mx-auto px-3">
+    <div className="py-5 px-5 md:py-10 md:px-10">
+      <section className="max-w-5xl mx-auto">
         <div>
           <h3 className="text-3xl font-bold mb-6 text-center">Tech Stack</h3>
           <p className="text-md leading-8 text-gray-800 text-center">
@@ -94,11 +94,11 @@ const Techs = () => {
             development and deliver efficient solutions.
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 py-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6 py-6 md:py-8">
           {techs.map(({ id, title, src }) => (
             <div
               key={id}
-              className="bg-white rounded-lg shadow-md  cursor-pointer hover:scale-110 duration-300 overflow-hidden flex flex-col items-center justify-center"
+              className="bg-white dark:bg-gray-200 rounded-lg shadow-md  cursor-pointer hover:scale-110 duration-300 overflow-hidden flex flex-col items-center justify-center"
             >
               <img
                 src={src}

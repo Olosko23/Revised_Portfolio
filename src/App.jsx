@@ -39,13 +39,13 @@ function App() {
 
   return (
     <div className={darkMode ? "dark" : ""}>
-      <main className="bg-[#FEFBF3]dark:bg-[#557571]">
+      <main className="bg-[#FEFBF3] dark:bg-[#557571]">
         <>
-          <nav className="py-4 px-10 mb-12 flex justify-between">
+          <nav className="py-2 px-2 md:py-4 md:px-10 mb-8 md:mb-12 flex justify-between">
             <h1 className="text-xl sm:text-4xl font-bold text-gray-800 dark:text-gray-200 cursor-pointer hover:scale-105">
               Collins.
             </h1>
-            <ul className="flex items-center">
+            <ul className="flex items-center justify-between py-1">
               {darkMode ? (
                 <li>
                   <IoSunny
@@ -64,7 +64,7 @@ function App() {
 
               <li>
                 <a
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 font-semibold"
+                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-3 py-1 md:px-4 md:py-2 rounded-md ml-8 font-semibold"
                   href="Resume.pdf"
                   download="download"
                   target="_blank"
@@ -114,7 +114,7 @@ function App() {
           </motion.section>
         </>
         <div className="fixed bottom-10 right-10">
-          <Link to="top" smooth={true} duration={1000}>
+          <Link to="top" smooth={true} duration={2000}>
             <button
               onClick={scrollToTop}
               className="bg-gray-500 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-full py-2 px-4 focus:outline-none"

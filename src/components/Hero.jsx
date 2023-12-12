@@ -23,7 +23,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="py-12">
+    <div className="py-8 md:py-12">
       <div className="text-center pt-14 px-10">
         <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
           Collins George
@@ -34,7 +34,7 @@ const Hero = () => {
           comprehensive programming solutions.
         </p>
       </div>
-      <div className="text-5xl flex justify-center gap-8 py-4 my-4 px-4 text-gray-600">
+      <div className="text-2xl md:text-4xl flex justify-center gap-8 py-4 my-4 px-4 text-gray-600">
         <a
           className="hover:bg-[#1DA1F2] rounded-md p-1"
           href="https://twitter.com/olos_ko_lins"
@@ -69,7 +69,7 @@ const Hero = () => {
         </a>
       </div>
       <motion.section initial={{ opacity: 0, y: 50 }} animate={controls}>
-        <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mb-20 overflow-hidden md:h-96 md:w-96">
+        <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-10 md:mt-20  mb-10 md:mb-20 overflow-hidden md:h-96 md:w-96">
           <img src={collins} alt="image" />
         </div>{" "}
       </motion.section>
