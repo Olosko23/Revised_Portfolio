@@ -63,18 +63,21 @@ const Contact = () => {
                 <input
                   type="text"
                   name="name"
+                  required
                   placeholder="Name"
                   className="p-2 my-4 border-2 rounded-md focus:outline-none"
                 />
                 <input
                   type="email"
                   name="email"
+                  required
                   placeholder="email@email.com"
                   className="p-2 my-4 border-2 rounded-md focus:outline-none"
                 />
                 <textarea
                   name="message"
                   rows="5"
+                  required
                   placeholder="Enter Your Message"
                   className="p-2 my-4 border-2 rounded-md focus:outline-none"
                 />

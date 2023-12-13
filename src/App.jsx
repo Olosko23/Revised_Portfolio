@@ -22,7 +22,7 @@ function App() {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
-      duration: 2000,
+      duration: 2500,
     });
   };
 
