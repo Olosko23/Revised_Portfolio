@@ -4,8 +4,37 @@ import {
   AiFillGithub,
 } from "react-icons/ai";
 import { BsWhatsapp } from "react-icons/bs";
+import axios from "axios";
+import { useState } from "react";
 
 const Contact = () => {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState();
+  const [alert, setAlert] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setAlert("");
+    try {
+      const response = await axios.post(
+        "https://contact-form-fr65.onrender.com",
+        { username, email, message }
+      );
+
+      if (response.status === 200) {
+        setUsername("");
+        setEmail("");
+        setMessage("");
+        setAlert("Form submitetd successfully!");
+      } else {
+        setAlert("Error Submitting Details");
+      }
+    } catch (error) {
+      setAlert("Error Submitting Details");
+    }
+  };
+
   return (
     <div className="bg-gradient-to-r from-purple-500 to-indigo-500 py-10 md:py-20 px-3">
       <section className="flex justify-center items-center">
@@ -55,16 +84,13 @@ const Contact = () => {
               </div>
             </div>
             <div className="bg-white dark:bg-gray-600 p-8 md:w-1/2">
-              <form
-                action="https://getform.io/f/94770f33-2cf2-411e-8c9f-bd1a03122049"
-                method="POST"
-                className="flex flex-col"
-              >
+              <form onSubmit={handleSubmit} className="flex flex-col">
                 <input
                   type="text"
                   name="name"
                   required
                   placeholder="Name"
+                  onChange={(e) => setUsername(e.target.value)}
                   className="p-2 my-4 border-2 rounded-md focus:outline-none"
                 />
                 <input
@@ -72,6 +98,7 @@ const Contact = () => {
                   name="email"
                   required
                   placeholder="email@email.com"
+                  onChange={(e) => setEmail(e.target.value)}
                   className="p-2 my-4 border-2 rounded-md focus:outline-none"
                 />
                 <textarea
@@ -79,8 +106,10 @@ const Contact = () => {
                   rows="5"
                   required
                   placeholder="Enter Your Message"
+                  onChange={(e) => setMessage(e.target.value)}
                   className="p-2 my-4 border-2 rounded-md focus:outline-none"
                 />
+                {alert && <span className="p-2 font-semibold">{alert}</span>}
                 <button
                   type="submit"
                   className="bg-gradient-to-b from-cyan-500 to-teal-500 text-white px-6 py-3 rounded-md hover:scale-110 duration-300"
