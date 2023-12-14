@@ -18,7 +18,7 @@ const Contact = () => {
     setAlert("");
     try {
       const response = await axios.post(
-        "https://contact-form-fr65.onrender.com",
+        "https://contact-form-fr65.onrender.com/create",
         { username, email, message }
       );
 
