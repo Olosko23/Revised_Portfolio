@@ -1,11 +1,11 @@
+import { useState } from "react";
+import axios from "axios";
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillGithub,
 } from "react-icons/ai";
 import { BsWhatsapp } from "react-icons/bs";
-import axios from "axios";
-import { useState } from "react";
 
 const Contact = () => {
   const [username, setUsername] = useState("");
