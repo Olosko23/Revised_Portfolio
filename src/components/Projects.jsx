@@ -16,7 +16,7 @@ const Projects = () => {
       description:
         "A free API to retrieve season data such as races, standing, drivers and teams. Change the last url parameter from drivers to races or teams",
       imageUrl: GitHub,
-      link: "https://f1-z1ad.onrender.com/api/drivers",
+      link: "https://f1-z1ad.onrender.com/api",
     },
     {
       id: 3,
