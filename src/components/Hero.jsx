@@ -1,9 +1,6 @@
 import { useEffect } from "react";
-import {
-  AiFillTwitterCircle,
-  AiFillLinkedin,
-  AiFillGithub,
-} from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { FaXTwitter } from "react-icons/fa6";
 import { BsWhatsapp } from "react-icons/bs";
 import collins from "../assets/HeroImage.jpeg";
 import { motion, useAnimation } from "framer-motion";
@@ -41,7 +38,7 @@ const Hero = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <AiFillTwitterCircle />
+          <FaXTwitter />
         </a>
         <a
           className="hover:bg-[#0072b1] rounded-md p-1"

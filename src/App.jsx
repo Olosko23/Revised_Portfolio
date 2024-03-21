@@ -12,6 +12,7 @@ import Contact from "./components/Contact";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [navBackground, setNavBackground] = useState("bg-white");
   const controls = useAnimation();
 
   const getYear = () => {
@@ -27,6 +28,18 @@ function App() {
   };
 
   const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    const vh = Math.max(
+      document.documentElement.clientHeight || 0,
+      window.innerHeight || 0
+    );
+    if (scrollPosition > 0.7 * vh) {
+      setNavBackground(
+        "bg-gradient-to-r from-[#F3F5F0] to-teal-100 via-purple-100 shadow-md"
+      );
+    } else {
+      setNavBackground("bg-white");
+    }
     controls.start({ opacity: 1, y: 0, transition: { duration: 0.4 } });
   };
 
@@ -39,91 +52,80 @@ function App() {
 
   return (
     <div className={darkMode ? "dark" : ""}>
-      <main className="bg-[#FEFBF3] dark:bg-[#557571]">
-        <>
-          <nav className="py-2 px-2 md:py-4 md:px-10 mb-8 md:mb-12 flex justify-between">
-            <h1 className="text-xl sm:text-4xl font-bold text-gray-800 dark:text-gray-200 cursor-pointer hover:scale-105">
-              Collins.
-            </h1>
-            <ul className="flex items-center justify-between py-1">
-              {darkMode ? (
-                <li>
-                  <IoSunny
-                    onClick={() => setDarkMode(!darkMode)}
-                    className="cursor-pointer text-2xl"
-                  />
-                </li>
-              ) : (
-                <li>
-                  <IoMoon
-                    onClick={() => setDarkMode(!darkMode)}
-                    className="cursor-pointer text-2xl"
-                  />
-                </li>
-              )}
-
+      <nav
+        className={`fixed top-0 left-0 right-0 text-gray-700 p-4 z-50 ${navBackground} dark:bg-inherit`}
+      >
+        <div className="flex justify-between">
+          <h1 className="text-xl sm:text-4xl font-bold cursor-pointer hover:scale-105">
+            Collins.
+          </h1>
+          <ul className="flex items-center justify-between">
+            {darkMode ? (
               <li>
-                <a
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-3 py-1 md:px-4 md:py-2 rounded-md ml-8 font-semibold"
-                  href="Resume.pdf"
-                  download="download"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Resume
-                </a>
+                <IoSunny
+                  onClick={() => setDarkMode(!darkMode)}
+                  className="cursor-pointer text-2xl"
+                />
               </li>
-            </ul>
-          </nav>
-        </>
+            ) : (
+              <li>
+                <IoMoon
+                  onClick={() => setDarkMode(!darkMode)}
+                  className="cursor-pointer text-2xl"
+                />
+              </li>
+            )}
 
-        <Hero />
-        <motion.section initial={{ opacity: 0, y: 50 }} animate={controls}>
-          <About />
-        </motion.section>
-
-        <motion.section initial={{ opacity: 0, y: 50 }} animate={controls}>
-          <Services />
-        </motion.section>
-
-        <motion.section initial={{ opacity: 0, y: 50 }} animate={controls}>
-          <Techs />
-        </motion.section>
-
-        <motion.section initial={{ opacity: 0, y: 50 }} animate={controls}>
-          <Projects />
-        </motion.section>
-
-        <motion.section initial={{ opacity: 0, y: 50 }} animate={controls}>
-          <Contact />
-        </motion.section>
-        <>
-          <motion.section
-            className="bg-gradient-to-r from-purple-500 to-indigo-500 px-10"
-            initial={{ opacity: 0, y: 50 }}
-            animate={controls}
-          >
-            <div className="h-10">
-              <div className="flex flex-row justify-center gap-3">
-                <p className="font-medium">George Collins &copy; {getYear()}</p>
-                <p className="font-thin hidden sm:flex">
-                  Developed using React and Tailwind CSS
-                </p>
-              </div>
-            </div>
-          </motion.section>
-        </>
-        <div className="fixed bottom-10 right-10">
-          <Link to="top" smooth={true} duration={2000}>
-            <button
-              onClick={scrollToTop}
-              className="bg-gray-500 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-full py-2 px-4 focus:outline-none"
-            >
-              &#8593;
-            </button>
-          </Link>
+            <li>
+              <a
+                className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-3 py-1 md:px-4 md:py-2 rounded-md ml-8 font-semibold"
+                href="Resume.pdf"
+                download="download"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Resume
+              </a>
+            </li>
+          </ul>
         </div>
-      </main>
+      </nav>
+
+      <div className="container">
+        <main className="bg-[#FEFBF3] dark:bg-[#557571] pt-16">
+          <Hero />
+          <motion.section initial={{ opacity: 0, y: 50 }} animate={controls}>
+            <About />
+          </motion.section>
+
+          <motion.section initial={{ opacity: 0, y: 50 }} animate={controls}>
+            <Services />
+          </motion.section>
+
+          <motion.section initial={{ opacity: 0, y: 50 }} animate={controls}>
+            <Techs />
+          </motion.section>
+
+          <motion.section initial={{ opacity: 0, y: 50 }} animate={controls}>
+            <Projects />
+          </motion.section>
+
+          <motion.section initial={{ opacity: 0, y: 50 }} animate={controls}>
+            <Contact />
+          </motion.section>
+        </main>
+      </div>
+
+      <div className="fixed bottom-10 right-10">
+        <Link to="top" smooth={true} duration={2000}>
+          <button
+            onClick={scrollToTop}
+            className="bg-gray-500 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-full py-2 px-4 focus:outline-none"
+          >
+            &#8593;
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }
