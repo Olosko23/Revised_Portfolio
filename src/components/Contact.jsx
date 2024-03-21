@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
 import {
-  AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillGithub,
 } from "react-icons/ai";
