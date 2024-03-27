@@ -35,10 +35,10 @@ function App() {
     );
     if (scrollPosition > 0.7 * vh) {
       setNavBackground(
-        "bg-gradient-to-r from-[#F3F5F0] to-teal-100 via-purple-100 shadow-md"
+        "bg-gradient-to-r from-[#F3F5F0] to-teal-50 via-purple-100 shadow-md"
       );
     } else {
-      setNavBackground("bg-white");
+      setNavBackground("bg-[#FEFBF3]");
     }
     controls.start({ opacity: 1, y: 0, transition: { duration: 0.4 } });
   };
